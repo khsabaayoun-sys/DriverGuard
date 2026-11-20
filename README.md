@@ -2,6 +2,14 @@
 
 **Team:** Khaled Sabehayoun, Karl Khadij · American University of Beirut · Fall 2026
 
+**Repository:** https://github.com/khsabaayoun-sys/DriverGuard · **Final trained model:** [`models/E4_best.keras`](https://github.com/khsabaayoun-sys/DriverGuard/raw/main/models/E4_best.keras) (selected MobileNetV2) · [`models/svm_selected.joblib`](https://github.com/khsabaayoun-sys/DriverGuard/raw/main/models/svm_selected.joblib) (HOG + SVM)
+
+```python
+import tensorflow as tf, numpy as np
+model = tf.keras.models.load_model('models/E4_best.keras')   # input: RGB 224x224, raw values 0-255
+probs = model.predict(np.zeros((1, 224, 224, 3), np.float32))  # -> 10 class probabilities (c0..c9)
+```
+
 We classify ten driver activities (c0–c9) in the State Farm Distracted Driver Detection images and ask:
 *does an ImageNet-pretrained MobileNetV2 outperform a tuned HOG + SVM baseline on previously unseen drivers, and does
 fine-tuning improve on frozen features?*
@@ -11,7 +19,7 @@ fine-tuning improve on frozen features?*
 | File | What it is |
 |---|---|
 | `DriverGuard_Final_Complete.ipynb` | Complete Kaggle notebook: audit → splits → HOG + SVM → MobileNetV2 E1–E6 → analyses → one-time test |
-| `DriverGuard_Final_Report.docx` / `.pdf` | Final report (generated from the notebook's `results_summary.json`) |
+| `report/DriverGuard_Final_Report.docx` / `.pdf` (repo) — root of the ZIP | Final report (generated from the notebook's `results_summary.json`) |
 | `make_report.js` | Regenerates the report from a results folder: `node make_report.js <results_dir> DriverGuard_Final_Report.docx` |
 | `results/` | Outputs of the Kaggle run (tables, figures, JSON), when available |
 | `requirements.txt` | Python packages (all are pre-installed on Kaggle) |

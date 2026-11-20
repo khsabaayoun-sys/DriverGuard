@@ -90,7 +90,8 @@ const children = [];
 children.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 }, children: [new TextRun({ text: 'DriverGuard: AI-Based Driver Distraction Detection Using Computer Vision', bold: true, size: 32 })] }));
 children.push(new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'Khaled Sabehayoun and Karl Khadij', size: 24 })] }));
 children.push(new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'CMPS 262 – Data Science, American University of Beirut — Final Project Report', size: 22 })] }));
-children.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, children: [new TextRun({ text: 'November 20, 2026', size: 22 })] }));
+children.push(new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'November 20, 2026', size: 22 })] }));
+children.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, children: [new TextRun({ text: 'Code, trained models and results: https://github.com/khsabaayoun-sys/DriverGuard', size: 22 })] }));
 if (!FINAL) {
   children.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, border: { top: BORDER, bottom: BORDER, left: BORDER, right: BORDER },
     children: [new TextRun({ text: 'DRAFT — the final full-dataset experiments have not yet been executed. Every value marked "Pending" will be filled in automatically from the notebook outputs. Milestone 1 values shown are historical results verified from saved notebook outputs.', bold: true, size: 20 })] }));
@@ -240,6 +241,7 @@ children.push(H1('7. Limitations'));
 
 // 7. Reproducibility and status
 children.push(H1('8. Reproducibility and status of experiments'));
+children.push(P('**GitHub repository:** https://github.com/khsabaayoun-sys/DriverGuard — contains the documented notebook (with all outputs), the final trained models for download (models/E4_best.keras, the selected MobileNetV2; models/svm_selected.joblib, the HOG + SVM pipeline), all result tables and figures, this report and the poster.'));
 children.push(P('The notebook DriverGuard_Final_Complete.ipynb runs top-to-bottom on Kaggle (GPU, Internet on for ImageNet weights) as a committed version. It fixes seed 42, saves the split CSVs, streams images from disk, writes HOG features as memory-mapped float32 chunks that resume after interruption, checkpoints every CNN on validation macro-F1, skips completed stages on re-run and locks the test evaluation. The code was executed end-to-end in an offline smoke test on a synthetic dataset with the State Farm directory structure (pipeline, resume logic and test lock verified); the real-data numbers come only from the Kaggle run' + (FINAL ? ` (committed Kaggle version, ${(S.environment.gpus || []).join(' + ')}, TensorFlow ${S.environment.tensorflow}; total runtime about 58 minutes). The executed notebook with all outputs, the trained models (E4_best.keras, svm_selected.joblib) and all result tables are included in the submitted package.` : '.') ));
 children.push(table(['Component', 'Status'], [
   ['Driver-disjoint splits (13,904 / 3,542 / 4,978)', 'Completed (Milestone 1, verified)'],

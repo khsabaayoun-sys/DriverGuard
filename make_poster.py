@@ -49,7 +49,7 @@ def pic(path, x, y, w=None, h=None):
 box(0, 0, 48, 4.3, fill=MAROON)
 text(1, 0.45, 46, 1.6, [{'t': 'DriverGuard: AI-Based Driver Distraction Detection Using Computer Vision', 'size': 80, 'bold': True, 'color': WHITE, 'align': PP_ALIGN.CENTER}])
 text(1, 2.25, 46, 1.0, [{'t': 'Khaled Sabehayoun  ·  Karl Khadij', 'size': 44, 'color': WHITE, 'align': PP_ALIGN.CENTER}])
-text(1, 3.2, 46, 0.8, [{'t': 'CMPS 262 – Data Science  ·  American University of Beirut  ·  Fall 2026', 'size': 32, 'color': WHITE, 'align': PP_ALIGN.CENTER}])
+text(1, 3.2, 46, 0.8, [{'t': 'CMPS 262 – Data Science  ·  American University of Beirut  ·  Fall 2026  ·  github.com/khsabaayoun-sys/DriverGuard', 'size': 32, 'color': WHITE, 'align': PP_ALIGN.CENTER}])
 
 M, G = 0.8, 0.8
 CW = (48 - 2 * M - 2 * G) / 3
