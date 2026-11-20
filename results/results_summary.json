@@ -1,0 +1,1034 @@
+{
+  "project": "DriverGuard",
+  "authors": [
+    "Khaled Sabehayoun",
+    "Karl Khadij"
+  ],
+  "course": "CMPS 262",
+  "environment": {
+    "python": "3.13.16",
+    "tensorflow": "2.21.0",
+    "numpy": "2.1.3",
+    "sklearn": "1.6.1",
+    "skimage": "0.25.2",
+    "opencv": "4.14.0",
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "mixed_precision": true,
+    "cpu_count": 4,
+    "quick_mode": false
+  },
+  "audit": {
+    "images": 22424,
+    "drivers": 26,
+    "classes": 10,
+    "missing_metadata": 0,
+    "missing_files": 0,
+    "duplicate_filenames": 0,
+    "image_shapes_in_random_sample": {
+      "(480, 640, 3)": 300
+    },
+    "class_counts": {
+      "c0": 2489,
+      "c1": 2267,
+      "c2": 2317,
+      "c3": 2346,
+      "c4": 2326,
+      "c5": 2312,
+      "c6": 2325,
+      "c7": 2002,
+      "c8": 1911,
+      "c9": 2129
+    },
+    "images_per_driver_min": 346,
+    "images_per_driver_max": 1237,
+    "images_per_driver_median": 823.0
+  },
+  "splits": [
+    {
+      "partition": "train",
+      "images": 13904,
+      "drivers": 16,
+      "driver_ids": "p015 p016 p021 p022 p024 p039 p042 p045 p047 p049 p051 p052 p056 p064 p072 p081"
+    },
+    {
+      "partition": "validation",
+      "images": 3542,
+      "drivers": 4,
+      "driver_ids": "p012 p014 p061 p066"
+    },
+    {
+      "partition": "test",
+      "images": 4978,
+      "drivers": 6,
+      "driver_ids": "p002 p026 p035 p041 p050 p075"
+    }
+  ],
+  "svm_grid": [
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.01,
+      "val_accuracy": 0.4124788255223038,
+      "val_macro_f1": 0.4166714647573129,
+      "fit_seconds": 81.74369484599993
+    },
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.001,
+      "val_accuracy": 0.4161490683229814,
+      "val_macro_f1": 0.40343776997032404,
+      "fit_seconds": 80.05207397799995
+    },
+    {
+      "hog": "hog64_c8",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.001,
+      "val_accuracy": 0.4051383399209486,
+      "val_macro_f1": 0.3946374903017102,
+      "fit_seconds": 77.56485267900007
+    },
+    {
+      "hog": "hog64_c8",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.01,
+      "val_accuracy": 0.40683229813664595,
+      "val_macro_f1": 0.3874815259196406,
+      "fit_seconds": 80.92544649299998
+    },
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "PCA256+RBF-SVC",
+      "k": 256,
+      "C": 10.0,
+      "val_accuracy": 0.38283455674760025,
+      "val_macro_f1": 0.369759666498692,
+      "fit_seconds": 9.09347481099985
+    },
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.001,
+      "val_accuracy": 0.4031620553359684,
+      "val_macro_f1": 0.3687637227577708,
+      "fit_seconds": 19.58745737399977
+    },
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.01,
+      "val_accuracy": 0.3910220214568041,
+      "val_macro_f1": 0.3618860055081884,
+      "fit_seconds": 20.47377115299969
+    },
+    {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "PCA256+RBF-SVC",
+      "k": 256,
+      "C": 1.0,
+      "val_accuracy": 0.3791643139469226,
+      "val_macro_f1": 0.36154939124956337,
+      "fit_seconds": 9.54341445099999
+    },
+    {
+      "hog": "hog64_c8",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.001,
+      "val_accuracy": 0.36645962732919257,
+      "val_macro_f1": 0.33932507904825243,
+      "fit_seconds": 18.900967332000164
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 2000,
+      "C": 0.01,
+      "val_accuracy": 0.34839073969508755,
+      "val_macro_f1": 0.33100309588411003,
+      "fit_seconds": 86.92286944500006
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 2000,
+      "C": 0.001,
+      "val_accuracy": 0.3469791078486731,
+      "val_macro_f1": 0.3292521536750438,
+      "fit_seconds": 86.84747302999995
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 2000,
+      "C": 0.1,
+      "val_accuracy": 0.3351214003387916,
+      "val_macro_f1": 0.3227183728018978,
+      "fit_seconds": 317.9358724810004
+    },
+    {
+      "hog": "hog64_c8",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.01,
+      "val_accuracy": 0.3370976849237719,
+      "val_macro_f1": 0.30595345143564445,
+      "fit_seconds": 20.612291454000115
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 1000,
+      "C": 0.001,
+      "val_accuracy": 0.3116883116883117,
+      "val_macro_f1": 0.2986336351631203,
+      "fit_seconds": 33.34746363699992
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.001,
+      "val_accuracy": 0.2899491812535291,
+      "val_macro_f1": 0.2811702302144784,
+      "fit_seconds": 18.314970295999956
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.01,
+      "val_accuracy": 0.28402032749858835,
+      "val_macro_f1": 0.2787731777269854,
+      "fit_seconds": 18.797034165000014
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 1000,
+      "C": 0.01,
+      "val_accuracy": 0.29136081309994355,
+      "val_macro_f1": 0.27325036048013907,
+      "fit_seconds": 34.547444810000115
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 600,
+      "C": 0.1,
+      "val_accuracy": 0.2715979672501412,
+      "val_macro_f1": 0.2637452660829362,
+      "fit_seconds": 21.63906665499985
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 1000,
+      "C": 0.1,
+      "val_accuracy": 0.2651044607566347,
+      "val_macro_f1": 0.2386132048902491,
+      "fit_seconds": 43.7539536459999
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 300,
+      "C": 0.001,
+      "val_accuracy": 0.2100508187464709,
+      "val_macro_f1": 0.21973245756656454,
+      "fit_seconds": 7.893753606000018
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 300,
+      "C": 0.01,
+      "val_accuracy": 0.1880293619424054,
+      "val_macro_f1": 0.2011194557681256,
+      "fit_seconds": 9.378140664000057
+    },
+    {
+      "hog": "hog128_c8",
+      "hog_dims": 8100,
+      "model": "LinearSVC",
+      "k": 300,
+      "C": 0.1,
+      "val_accuracy": 0.16826651609260304,
+      "val_macro_f1": 0.1776498279589143,
+      "fit_seconds": 10.708096893999937
+    }
+  ],
+  "svm_selected": {
+    "hog": "hog128_c16",
+    "hog_dims": 1764,
+    "model": "LinearSVC",
+    "k": 1764,
+    "C": 0.01,
+    "val_accuracy": 0.4124788255223038,
+    "val_macro_f1": 0.4166714647573129,
+    "fit_seconds": 81.74369484599993
+  },
+  "hog_extraction_seconds_train_val": 175.61587672899987,
+  "cnn_experiments": [
+    {
+      "id": "E4",
+      "name": "Deeper FT (block 6+) 224px + aug",
+      "size": 224,
+      "mode": "deep",
+      "aug": true,
+      "epochs": 10,
+      "lr": 0.0001,
+      "ls": 0.1,
+      "wd": 0.0001,
+      "init": "E2",
+      "patience": 3,
+      "trainable_params": 2150602,
+      "total_params": 2270794,
+      "epochs_run": 7,
+      "best_epoch": 4,
+      "val_accuracy": 0.8780350084697911,
+      "val_macro_f1": 0.8661449606925855,
+      "val_loss": 0.5868828325283822,
+      "train_accuracy_at_best": 0.9964717626571655,
+      "training_seconds": 364.5433311840002,
+      "model_mb": 25.67
+    },
+    {
+      "id": "E3",
+      "name": "Partial FT (block 13+) 224px + aug",
+      "size": 224,
+      "mode": "partial",
+      "aug": true,
+      "epochs": 10,
+      "lr": 0.0001,
+      "ls": 0.1,
+      "wd": 0.0001,
+      "init": "E2",
+      "patience": 3,
+      "trainable_params": 1676170,
+      "total_params": 2270794,
+      "epochs_run": 10,
+      "best_epoch": 9,
+      "val_accuracy": 0.847261434217956,
+      "val_macro_f1": 0.8337562950792876,
+      "val_loss": 0.7784807064346375,
+      "train_accuracy_at_best": 0.9990639686584473,
+      "training_seconds": 419.118496434,
+      "model_mb": 22.04
+    },
+    {
+      "id": "E6",
+      "name": "Deeper FT 160px + aug",
+      "size": 160,
+      "mode": "deep",
+      "aug": true,
+      "epochs": 10,
+      "lr": 0.0001,
+      "ls": 0.1,
+      "wd": 0.0001,
+      "init": "E1",
+      "patience": 3,
+      "trainable_params": 2150602,
+      "total_params": 2270794,
+      "epochs_run": 8,
+      "best_epoch": 5,
+      "val_accuracy": 0.8373800112930547,
+      "val_macro_f1": 0.8146016466146684,
+      "val_loss": 0.7048394124143785,
+      "train_accuracy_at_best": 0.9943836331367493,
+      "training_seconds": 276.46356121400004,
+      "model_mb": 25.67
+    },
+    {
+      "id": "E5",
+      "name": "Partial FT 224px, no aug",
+      "size": 224,
+      "mode": "partial",
+      "aug": false,
+      "epochs": 8,
+      "lr": 0.0001,
+      "ls": 0.1,
+      "wd": 0.0001,
+      "init": "E2",
+      "patience": 3,
+      "trainable_params": 1676170,
+      "total_params": 2270794,
+      "epochs_run": 8,
+      "best_epoch": 6,
+      "val_accuracy": 0.8018068887634106,
+      "val_macro_f1": 0.7812059688252435,
+      "val_loss": 0.9042106616733732,
+      "train_accuracy_at_best": 1.0,
+      "training_seconds": 282.37690280099923,
+      "model_mb": 22.02
+    },
+    {
+      "id": "E1",
+      "name": "Frozen 160px, no aug (M1 setup)",
+      "size": 160,
+      "mode": "frozen",
+      "aug": false,
+      "epochs": 8,
+      "lr": 0.001,
+      "ls": 0.0,
+      "wd": 0.0,
+      "init": null,
+      "patience": 3,
+      "trainable_params": 12810,
+      "total_params": 2270794,
+      "epochs_run": 8,
+      "best_epoch": 8,
+      "val_accuracy": 0.5920383963862225,
+      "val_macro_f1": 0.5853138409530231,
+      "val_loss": 1.19572809348275,
+      "train_accuracy_at_best": 0.953557014465332,
+      "training_seconds": 212.91982285099994,
+      "model_mb": 9.32
+    },
+    {
+      "id": "E2",
+      "name": "Frozen 224px + aug",
+      "size": 224,
+      "mode": "frozen",
+      "aug": true,
+      "epochs": 8,
+      "lr": 0.001,
+      "ls": 0.1,
+      "wd": 0.0,
+      "init": null,
+      "patience": 3,
+      "trainable_params": 12810,
+      "total_params": 2270794,
+      "epochs_run": 6,
+      "best_epoch": 3,
+      "val_accuracy": 0.5392433653303218,
+      "val_macro_f1": 0.5227192347614097,
+      "val_loss": 1.3347751140311166,
+      "train_accuracy_at_best": 0.7952188849449158,
+      "training_seconds": 220.16481542600013,
+      "model_mb": 9.34
+    }
+  ],
+  "selection": {
+    "svm": {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.01,
+      "val_accuracy": 0.4124788255223038,
+      "val_macro_f1": 0.4166714647573129,
+      "fit_seconds": 81.74369484599993
+    },
+    "cnn_selected": "E4",
+    "cnn_best_frozen": "E1",
+    "cnn_best_finetuned": "E4",
+    "criterion": "validation macro-F1",
+    "decided_at": "2026-11-20 20:37:10"
+  },
+  "validation_per_class": [
+    {
+      "class": "c0",
+      "activity": "Safe driving",
+      "precision": 0.766260162601626,
+      "recall": 0.9496221662468514,
+      "f1": 0.8481439820022497,
+      "support": 397,
+      "svm_f1": 0.33825944170771755
+    },
+    {
+      "class": "c1",
+      "activity": "Texting \u2013 right",
+      "precision": 0.8983050847457628,
+      "recall": 0.8390501319261213,
+      "f1": 0.8676671214188267,
+      "support": 379,
+      "svm_f1": 0.36853002070393376
+    },
+    {
+      "class": "c2",
+      "activity": "Phone \u2013 right",
+      "precision": 0.9864864864864865,
+      "recall": 0.9656084656084656,
+      "f1": 0.9759358288770054,
+      "support": 378,
+      "svm_f1": 0.12093023255813953
+    },
+    {
+      "class": "c3",
+      "activity": "Texting \u2013 left",
+      "precision": 0.9747191011235955,
+      "recall": 0.9302949061662198,
+      "f1": 0.9519890260631001,
+      "support": 373,
+      "svm_f1": 0.4459016393442623
+    },
+    {
+      "class": "c4",
+      "activity": "Phone \u2013 left",
+      "precision": 0.9022556390977443,
+      "recall": 0.9448818897637795,
+      "f1": 0.9230769230769231,
+      "support": 381,
+      "svm_f1": 0.014035087719298246
+    },
+    {
+      "class": "c5",
+      "activity": "Operating radio",
+      "precision": 0.8867924528301887,
+      "recall": 0.9894736842105263,
+      "f1": 0.9353233830845771,
+      "support": 380,
+      "svm_f1": 0.7526555386949925
+    },
+    {
+      "class": "c6",
+      "activity": "Drinking",
+      "precision": 0.8372703412073491,
+      "recall": 0.8836565096952909,
+      "f1": 0.8598382749326146,
+      "support": 361,
+      "svm_f1": 0.557632398753894
+    },
+    {
+      "class": "c7",
+      "activity": "Reaching behind",
+      "precision": 0.9174311926605505,
+      "recall": 0.9554140127388535,
+      "f1": 0.9360374414976599,
+      "support": 314,
+      "svm_f1": 0.8258064516129032
+    },
+    {
+      "class": "c8",
+      "activity": "Hair / makeup",
+      "precision": 0.7813765182186235,
+      "recall": 0.6542372881355932,
+      "f1": 0.7121771217712177,
+      "support": 295,
+      "svm_f1": 0.46875
+    },
+    {
+      "class": "c9",
+      "activity": "Talking to passenger",
+      "precision": 0.8072916666666666,
+      "recall": 0.545774647887324,
+      "f1": 0.6512605042016807,
+      "support": 284,
+      "svm_f1": 0.2742138364779874
+    }
+  ],
+  "validation_top_confusions": [
+    {
+      "true": "c9",
+      "predicted": "c0",
+      "count": 72,
+      "share_of_true_class": 0.2535211267605634
+    },
+    {
+      "true": "c1",
+      "predicted": "c6",
+      "count": 54,
+      "share_of_true_class": 0.1424802110817942
+    },
+    {
+      "true": "c8",
+      "predicted": "c4",
+      "count": 36,
+      "share_of_true_class": 0.12203389830508475
+    },
+    {
+      "true": "c3",
+      "predicted": "c0",
+      "count": 25,
+      "share_of_true_class": 0.06702412868632708
+    },
+    {
+      "true": "c9",
+      "predicted": "c5",
+      "count": 24,
+      "share_of_true_class": 0.08450704225352113
+    },
+    {
+      "true": "c6",
+      "predicted": "c1",
+      "count": 23,
+      "share_of_true_class": 0.06371191135734072
+    },
+    {
+      "true": "c8",
+      "predicted": "c9",
+      "count": 19,
+      "share_of_true_class": 0.06440677966101695
+    },
+    {
+      "true": "c6",
+      "predicted": "c8",
+      "count": 18,
+      "share_of_true_class": 0.04986149584487535
+    }
+  ],
+  "validation_per_driver": [
+    {
+      "subject": "p012",
+      "cnn_correct": 0.8444714459295262,
+      "svm_correct": 0.44957472660996356
+    },
+    {
+      "subject": "p014",
+      "cnn_correct": 0.9212328767123288,
+      "svm_correct": 0.3493150684931507
+    },
+    {
+      "subject": "p061",
+      "cnn_correct": 0.8825710754017305,
+      "svm_correct": 0.5475896168108776
+    },
+    {
+      "subject": "p066",
+      "cnn_correct": 0.8646034816247582,
+      "svm_correct": 0.3307543520309478
+    }
+  ],
+  "calibration": {
+    "model": "E4",
+    "val_ece_uncalibrated": 0.20274287635983215,
+    "val_ece_temperature_crossfit": 0.020576477067609185,
+    "val_nll_uncalibrated": 0.5868828325283822,
+    "val_nll_temperature_crossfit": 0.4149254673276702,
+    "temperature_folds": [
+      0.5541256353117336,
+      0.48521651417652434
+    ],
+    "temperature_all_validation": 0.5212487895156793,
+    "mean_confidence": 0.6752921342849731,
+    "val_accuracy": 0.8780350084697911
+  },
+  "robustness": [
+    {
+      "perturbation": "clean",
+      "model": "HOG+SVM",
+      "accuracy": 0.42833333333333334,
+      "macro_f1": 0.4277798091042805
+    },
+    {
+      "perturbation": "clean",
+      "model": "E4",
+      "accuracy": 0.855,
+      "macro_f1": 0.851881681094763
+    },
+    {
+      "perturbation": "brightness_0.5",
+      "model": "HOG+SVM",
+      "accuracy": 0.4166666666666667,
+      "macro_f1": 0.42127903393290334
+    },
+    {
+      "perturbation": "brightness_0.5",
+      "model": "E4",
+      "accuracy": 0.7883333333333333,
+      "macro_f1": 0.7795921810169474
+    },
+    {
+      "perturbation": "brightness_0.7",
+      "model": "HOG+SVM",
+      "accuracy": 0.41833333333333333,
+      "macro_f1": 0.4245670095928742
+    },
+    {
+      "perturbation": "brightness_0.7",
+      "model": "E4",
+      "accuracy": 0.84,
+      "macro_f1": 0.83581804510355
+    },
+    {
+      "perturbation": "brightness_1.3",
+      "model": "HOG+SVM",
+      "accuracy": 0.41333333333333333,
+      "macro_f1": 0.4150914564010416
+    },
+    {
+      "perturbation": "brightness_1.3",
+      "model": "E4",
+      "accuracy": 0.8633333333333333,
+      "macro_f1": 0.859497544730415
+    },
+    {
+      "perturbation": "brightness_1.6",
+      "model": "HOG+SVM",
+      "accuracy": 0.425,
+      "macro_f1": 0.42548655445021194
+    },
+    {
+      "perturbation": "brightness_1.6",
+      "model": "E4",
+      "accuracy": 0.8566666666666667,
+      "macro_f1": 0.8521057723114813
+    },
+    {
+      "perturbation": "blur_2",
+      "model": "HOG+SVM",
+      "accuracy": 0.4266666666666667,
+      "macro_f1": 0.4342641222640383
+    },
+    {
+      "perturbation": "blur_2",
+      "model": "E4",
+      "accuracy": 0.8316666666666667,
+      "macro_f1": 0.8178390865706694
+    },
+    {
+      "perturbation": "blur_4",
+      "model": "HOG+SVM",
+      "accuracy": 0.4,
+      "macro_f1": 0.39515069861411395
+    },
+    {
+      "perturbation": "blur_4",
+      "model": "E4",
+      "accuracy": 0.795,
+      "macro_f1": 0.7754213373138346
+    },
+    {
+      "perturbation": "blur_8",
+      "model": "HOG+SVM",
+      "accuracy": 0.28833333333333333,
+      "macro_f1": 0.2901912540635361
+    },
+    {
+      "perturbation": "blur_8",
+      "model": "E4",
+      "accuracy": 0.4083333333333333,
+      "macro_f1": 0.3927598556758195
+    }
+  ],
+  "cost": [
+    {
+      "model": "HOG + LinearSVC",
+      "trainable_params": NaN,
+      "training_seconds": 81.74369484599993,
+      "feature_extraction_seconds_train_val": 175.61587672899987,
+      "model_size_mb": 0.19,
+      "cpu_ms_per_image_model_only": 0.525067233320442,
+      "cpu_ms_per_image_end_to_end": 7.1922781333341845,
+      "gpu_ms_per_image_batch32": NaN
+    },
+    {
+      "model": "MobileNetV2 E4",
+      "trainable_params": 2150602.0,
+      "training_seconds": 584.7081466100003,
+      "feature_extraction_seconds_train_val": NaN,
+      "model_size_mb": 25.67,
+      "cpu_ms_per_image_model_only": 33.397910999974556,
+      "cpu_ms_per_image_end_to_end": 38.984508200034426,
+      "gpu_ms_per_image_batch32": 1.4831933479162749
+    }
+  ],
+  "test": {
+    "evaluated_at": "2026-11-20 20:40:33",
+    "selection": {
+      "svm": {
+        "hog": "hog128_c16",
+        "hog_dims": 1764,
+        "model": "LinearSVC",
+        "k": 1764,
+        "C": 0.01,
+        "val_accuracy": 0.4124788255223038,
+        "val_macro_f1": 0.4166714647573129,
+        "fit_seconds": 81.74369484599993
+      },
+      "cnn_selected": "E4",
+      "cnn_best_frozen": "E1",
+      "cnn_best_finetuned": "E4",
+      "criterion": "validation macro-F1",
+      "decided_at": "2026-11-20 20:37:10"
+    },
+    "results": [
+      {
+        "model": "HOG + LinearSVC",
+        "accuracy": 0.545198875050221,
+        "macro_f1": 0.5343242858502746,
+        "macro_precision": 0.6184481692254769,
+        "macro_recall": 0.5387086888074153,
+        "accuracy_95ci": [
+          0.532342306147047,
+          0.5594616311771796
+        ],
+        "macro_f1_95ci": [
+          0.5205714906300694,
+          0.5477207958418236
+        ]
+      },
+      {
+        "model": "MobileNetV2 E1",
+        "accuracy": 0.5550421856167136,
+        "macro_f1": 0.5566340387708274,
+        "macro_precision": 0.5967191880477581,
+        "macro_recall": 0.5540226804507461,
+        "accuracy_95ci": [
+          0.5421805946163119,
+          0.5697067095218964
+        ],
+        "macro_f1_95ci": [
+          0.5434282970452831,
+          0.5709048869691672
+        ],
+        "log_loss": 1.4446194329627475,
+        "ece": 0.15431411089297034,
+        "ece_after_val_temperature": 0.2899041888212382,
+        "log_loss_after_val_temperature": 2.1972318529230006
+      },
+      {
+        "model": "MobileNetV2 E4",
+        "accuracy": 0.898754519887505,
+        "macro_f1": 0.8902114189598297,
+        "macro_precision": 0.9068096497732485,
+        "macro_recall": 0.8905761217910358,
+        "accuracy_95ci": [
+          0.8907141422257936,
+          0.9067898754519887
+        ],
+        "macro_f1_95ci": [
+          0.881228946511112,
+          0.8987024361295094
+        ],
+        "log_loss": 0.557237610442673,
+        "ece": 0.2264190708785088,
+        "ece_after_val_temperature": 0.02513309224224703,
+        "log_loss_after_val_temperature": 0.34117123834129953
+      }
+    ],
+    "mcnemar_selected_cnn_vs_svm": {
+      "a_right_b_wrong": 1943,
+      "a_wrong_b_right": 183,
+      "chi2": 1455.3532455315146,
+      "p_value": 0.0
+    },
+    "per_class_selected_cnn": [
+      {
+        "class": "c0",
+        "activity": "Safe driving",
+        "precision": 0.7622820919175911,
+        "recall": 0.8528368794326241,
+        "f1": 0.8050209205020921,
+        "support": 564
+      },
+      {
+        "class": "c1",
+        "activity": "Texting \u2013 right",
+        "precision": 0.9781181619256017,
+        "recall": 0.9430379746835443,
+        "f1": 0.9602577873254565,
+        "support": 474
+      },
+      {
+        "class": "c2",
+        "activity": "Phone \u2013 right",
+        "precision": 0.8289036544850499,
+        "recall": 0.9960079840319361,
+        "f1": 0.9048050770625566,
+        "support": 501
+      },
+      {
+        "class": "c3",
+        "activity": "Texting \u2013 left",
+        "precision": 0.9545454545454546,
+        "recall": 0.9794776119402985,
+        "f1": 0.9668508287292817,
+        "support": 536
+      },
+      {
+        "class": "c4",
+        "activity": "Phone \u2013 left",
+        "precision": 0.911504424778761,
+        "recall": 0.9698681732580038,
+        "f1": 0.9397810218978102,
+        "support": 531
+      },
+      {
+        "class": "c5",
+        "activity": "Operating radio",
+        "precision": 0.9103690685413005,
+        "recall": 0.9847908745247148,
+        "f1": 0.9461187214611873,
+        "support": 526
+      },
+      {
+        "class": "c6",
+        "activity": "Drinking",
+        "precision": 0.9838709677419355,
+        "recall": 0.9207547169811321,
+        "f1": 0.9512670565302144,
+        "support": 530
+      },
+      {
+        "class": "c7",
+        "activity": "Reaching behind",
+        "precision": 0.8882575757575758,
+        "recall": 0.9770833333333333,
+        "f1": 0.9305555555555556,
+        "support": 480
+      },
+      {
+        "class": "c8",
+        "activity": "Hair / makeup",
+        "precision": 0.8794117647058823,
+        "recall": 0.7475,
+        "f1": 0.8081081081081081,
+        "support": 400
+      },
+      {
+        "class": "c9",
+        "activity": "Talking to passenger",
+        "precision": 0.9708333333333333,
+        "recall": 0.5344036697247706,
+        "f1": 0.6893491124260355,
+        "support": 436
+      }
+    ],
+    "per_class_svm": [
+      {
+        "class": "c0",
+        "activity": "Safe driving",
+        "precision": 0.4114285714285714,
+        "recall": 0.6382978723404256,
+        "f1": 0.5003474635163307,
+        "support": 564
+      },
+      {
+        "class": "c1",
+        "activity": "Texting \u2013 right",
+        "precision": 0.8674698795180723,
+        "recall": 0.3037974683544304,
+        "f1": 0.45,
+        "support": 474
+      },
+      {
+        "class": "c2",
+        "activity": "Phone \u2013 right",
+        "precision": 0.5807365439093485,
+        "recall": 0.4091816367265469,
+        "f1": 0.48009367681498827,
+        "support": 501
+      },
+      {
+        "class": "c3",
+        "activity": "Texting \u2013 left",
+        "precision": 0.6141215106732348,
+        "recall": 0.6977611940298507,
+        "f1": 0.6532751091703056,
+        "support": 536
+      },
+      {
+        "class": "c4",
+        "activity": "Phone \u2013 left",
+        "precision": 0.9936305732484076,
+        "recall": 0.2937853107344633,
+        "f1": 0.45348837209302323,
+        "support": 531
+      },
+      {
+        "class": "c5",
+        "activity": "Operating radio",
+        "precision": 0.5225334957369062,
+        "recall": 0.8155893536121673,
+        "f1": 0.6369710467706013,
+        "support": 526
+      },
+      {
+        "class": "c6",
+        "activity": "Drinking",
+        "precision": 0.48201438848920863,
+        "recall": 0.7584905660377359,
+        "f1": 0.5894428152492669,
+        "support": 530
+      },
+      {
+        "class": "c7",
+        "activity": "Reaching behind",
+        "precision": 0.6501128668171557,
+        "recall": 0.6,
+        "f1": 0.6240520043336945,
+        "support": 480
+      },
+      {
+        "class": "c8",
+        "activity": "Hair / makeup",
+        "precision": 0.8253968253968254,
+        "recall": 0.65,
+        "f1": 0.7272727272727273,
+        "support": 400
+      },
+      {
+        "class": "c9",
+        "activity": "Talking to passenger",
+        "precision": 0.23703703703703705,
+        "recall": 0.22018348623853212,
+        "f1": 0.22829964328180738,
+        "support": 436
+      }
+    ],
+    "per_driver_accuracy": [
+      {
+        "subject": "p002",
+        "cnn": 0.9213793103448276,
+        "svm": 0.22482758620689655
+      },
+      {
+        "subject": "p026",
+        "cnn": 0.8929765886287625,
+        "svm": 0.5376254180602007
+      },
+      {
+        "subject": "p035",
+        "cnn": 0.9209905660377359,
+        "svm": 0.8018867924528302
+      },
+      {
+        "subject": "p041",
+        "cnn": 0.9338842975206612,
+        "svm": 0.6909090909090909
+      },
+      {
+        "subject": "p050",
+        "cnn": 0.8265822784810126,
+        "svm": 0.5012658227848101
+      },
+      {
+        "subject": "p075",
+        "cnn": 0.9078624078624079,
+        "svm": 0.5085995085995086
+      }
+    ]
+  }
+}

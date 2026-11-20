@@ -1,0 +1,17 @@
+{
+  "svm": {
+    "hog": "hog128_c16",
+    "hog_dims": 1764,
+    "model": "LinearSVC",
+    "k": 1764,
+    "C": 0.01,
+    "val_accuracy": 0.4124788255223038,
+    "val_macro_f1": 0.4166714647573129,
+    "fit_seconds": 81.74369484599993
+  },
+  "cnn_selected": "E4",
+  "cnn_best_frozen": "E1",
+  "cnn_best_finetuned": "E4",
+  "criterion": "validation macro-F1",
+  "decided_at": "2026-11-20 20:37:10"
+}

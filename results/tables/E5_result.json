@@ -1,0 +1,23 @@
+{
+  "id": "E5",
+  "name": "Partial FT 224px, no aug",
+  "size": 224,
+  "mode": "partial",
+  "aug": false,
+  "epochs": 8,
+  "lr": 0.0001,
+  "ls": 0.1,
+  "wd": 0.0001,
+  "init": "E2",
+  "patience": 3,
+  "trainable_params": 1676170,
+  "total_params": 2270794,
+  "epochs_run": 8,
+  "best_epoch": 6,
+  "val_accuracy": 0.8018068887634106,
+  "val_macro_f1": 0.7812059688252435,
+  "val_loss": 0.9042106616733732,
+  "train_accuracy_at_best": 1.0,
+  "training_seconds": 282.37690280099923,
+  "model_mb": 22.02
+}

@@ -1,0 +1,14 @@
+{
+  "model": "E4",
+  "val_ece_uncalibrated": 0.20274287635983215,
+  "val_ece_temperature_crossfit": 0.020576477067609185,
+  "val_nll_uncalibrated": 0.5868828325283822,
+  "val_nll_temperature_crossfit": 0.4149254673276702,
+  "temperature_folds": [
+    0.5541256353117336,
+    0.48521651417652434
+  ],
+  "temperature_all_validation": 0.5212487895156793,
+  "mean_confidence": 0.6752921342849731,
+  "val_accuracy": 0.8780350084697911
+}

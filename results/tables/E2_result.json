@@ -1,0 +1,23 @@
+{
+  "id": "E2",
+  "name": "Frozen 224px + aug",
+  "size": 224,
+  "mode": "frozen",
+  "aug": true,
+  "epochs": 8,
+  "lr": 0.001,
+  "ls": 0.1,
+  "wd": 0.0,
+  "init": null,
+  "patience": 3,
+  "trainable_params": 12810,
+  "total_params": 2270794,
+  "epochs_run": 6,
+  "best_epoch": 3,
+  "val_accuracy": 0.5392433653303218,
+  "val_macro_f1": 0.5227192347614097,
+  "val_loss": 1.3347751140311166,
+  "train_accuracy_at_best": 0.7952188849449158,
+  "training_seconds": 220.16481542600013,
+  "model_mb": 9.34
+}

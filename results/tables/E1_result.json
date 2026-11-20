@@ -1,0 +1,23 @@
+{
+  "id": "E1",
+  "name": "Frozen 160px, no aug (M1 setup)",
+  "size": 160,
+  "mode": "frozen",
+  "aug": false,
+  "epochs": 8,
+  "lr": 0.001,
+  "ls": 0.0,
+  "wd": 0.0,
+  "init": null,
+  "patience": 3,
+  "trainable_params": 12810,
+  "total_params": 2270794,
+  "epochs_run": 8,
+  "best_epoch": 8,
+  "val_accuracy": 0.5920383963862225,
+  "val_macro_f1": 0.5853138409530231,
+  "val_loss": 1.19572809348275,
+  "train_accuracy_at_best": 0.953557014465332,
+  "training_seconds": 212.91982285099994,
+  "model_mb": 9.32
+}

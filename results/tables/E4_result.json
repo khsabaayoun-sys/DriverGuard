@@ -1,0 +1,23 @@
+{
+  "id": "E4",
+  "name": "Deeper FT (block 6+) 224px + aug",
+  "size": 224,
+  "mode": "deep",
+  "aug": true,
+  "epochs": 10,
+  "lr": 0.0001,
+  "ls": 0.1,
+  "wd": 0.0001,
+  "init": "E2",
+  "patience": 3,
+  "trainable_params": 2150602,
+  "total_params": 2270794,
+  "epochs_run": 7,
+  "best_epoch": 4,
+  "val_accuracy": 0.8780350084697911,
+  "val_macro_f1": 0.8661449606925855,
+  "val_loss": 0.5868828325283822,
+  "train_accuracy_at_best": 0.9964717626571655,
+  "training_seconds": 364.5433311840002,
+  "model_mb": 25.67
+}

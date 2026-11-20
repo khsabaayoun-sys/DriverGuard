@@ -1,0 +1,26 @@
+{
+  "images": 22424,
+  "drivers": 26,
+  "classes": 10,
+  "missing_metadata": 0,
+  "missing_files": 0,
+  "duplicate_filenames": 0,
+  "image_shapes_in_random_sample": {
+    "(480, 640, 3)": 300
+  },
+  "class_counts": {
+    "c0": 2489,
+    "c1": 2267,
+    "c2": 2317,
+    "c3": 2346,
+    "c4": 2326,
+    "c5": 2312,
+    "c6": 2325,
+    "c7": 2002,
+    "c8": 1911,
+    "c9": 2129
+  },
+  "images_per_driver_min": 346,
+  "images_per_driver_max": 1237,
+  "images_per_driver_median": 823.0
+}

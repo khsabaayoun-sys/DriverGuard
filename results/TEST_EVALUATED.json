@@ -1,0 +1,277 @@
+{
+  "evaluated_at": "2026-11-20 20:40:33",
+  "selection": {
+    "svm": {
+      "hog": "hog128_c16",
+      "hog_dims": 1764,
+      "model": "LinearSVC",
+      "k": 1764,
+      "C": 0.01,
+      "val_accuracy": 0.4124788255223038,
+      "val_macro_f1": 0.4166714647573129,
+      "fit_seconds": 81.74369484599993
+    },
+    "cnn_selected": "E4",
+    "cnn_best_frozen": "E1",
+    "cnn_best_finetuned": "E4",
+    "criterion": "validation macro-F1",
+    "decided_at": "2026-11-20 20:37:10"
+  },
+  "results": [
+    {
+      "model": "HOG + LinearSVC",
+      "accuracy": 0.545198875050221,
+      "macro_f1": 0.5343242858502746,
+      "macro_precision": 0.6184481692254769,
+      "macro_recall": 0.5387086888074153,
+      "accuracy_95ci": [
+        0.532342306147047,
+        0.5594616311771796
+      ],
+      "macro_f1_95ci": [
+        0.5205714906300694,
+        0.5477207958418236
+      ]
+    },
+    {
+      "model": "MobileNetV2 E1",
+      "accuracy": 0.5550421856167136,
+      "macro_f1": 0.5566340387708274,
+      "macro_precision": 0.5967191880477581,
+      "macro_recall": 0.5540226804507461,
+      "accuracy_95ci": [
+        0.5421805946163119,
+        0.5697067095218964
+      ],
+      "macro_f1_95ci": [
+        0.5434282970452831,
+        0.5709048869691672
+      ],
+      "log_loss": 1.4446194329627475,
+      "ece": 0.15431411089297034,
+      "ece_after_val_temperature": 0.2899041888212382,
+      "log_loss_after_val_temperature": 2.1972318529230006
+    },
+    {
+      "model": "MobileNetV2 E4",
+      "accuracy": 0.898754519887505,
+      "macro_f1": 0.8902114189598297,
+      "macro_precision": 0.9068096497732485,
+      "macro_recall": 0.8905761217910358,
+      "accuracy_95ci": [
+        0.8907141422257936,
+        0.9067898754519887
+      ],
+      "macro_f1_95ci": [
+        0.881228946511112,
+        0.8987024361295094
+      ],
+      "log_loss": 0.557237610442673,
+      "ece": 0.2264190708785088,
+      "ece_after_val_temperature": 0.02513309224224703,
+      "log_loss_after_val_temperature": 0.34117123834129953
+    }
+  ],
+  "mcnemar_selected_cnn_vs_svm": {
+    "a_right_b_wrong": 1943,
+    "a_wrong_b_right": 183,
+    "chi2": 1455.3532455315146,
+    "p_value": 0.0
+  },
+  "per_class_selected_cnn": [
+    {
+      "class": "c0",
+      "activity": "Safe driving",
+      "precision": 0.7622820919175911,
+      "recall": 0.8528368794326241,
+      "f1": 0.8050209205020921,
+      "support": 564
+    },
+    {
+      "class": "c1",
+      "activity": "Texting \u2013 right",
+      "precision": 0.9781181619256017,
+      "recall": 0.9430379746835443,
+      "f1": 0.9602577873254565,
+      "support": 474
+    },
+    {
+      "class": "c2",
+      "activity": "Phone \u2013 right",
+      "precision": 0.8289036544850499,
+      "recall": 0.9960079840319361,
+      "f1": 0.9048050770625566,
+      "support": 501
+    },
+    {
+      "class": "c3",
+      "activity": "Texting \u2013 left",
+      "precision": 0.9545454545454546,
+      "recall": 0.9794776119402985,
+      "f1": 0.9668508287292817,
+      "support": 536
+    },
+    {
+      "class": "c4",
+      "activity": "Phone \u2013 left",
+      "precision": 0.911504424778761,
+      "recall": 0.9698681732580038,
+      "f1": 0.9397810218978102,
+      "support": 531
+    },
+    {
+      "class": "c5",
+      "activity": "Operating radio",
+      "precision": 0.9103690685413005,
+      "recall": 0.9847908745247148,
+      "f1": 0.9461187214611873,
+      "support": 526
+    },
+    {
+      "class": "c6",
+      "activity": "Drinking",
+      "precision": 0.9838709677419355,
+      "recall": 0.9207547169811321,
+      "f1": 0.9512670565302144,
+      "support": 530
+    },
+    {
+      "class": "c7",
+      "activity": "Reaching behind",
+      "precision": 0.8882575757575758,
+      "recall": 0.9770833333333333,
+      "f1": 0.9305555555555556,
+      "support": 480
+    },
+    {
+      "class": "c8",
+      "activity": "Hair / makeup",
+      "precision": 0.8794117647058823,
+      "recall": 0.7475,
+      "f1": 0.8081081081081081,
+      "support": 400
+    },
+    {
+      "class": "c9",
+      "activity": "Talking to passenger",
+      "precision": 0.9708333333333333,
+      "recall": 0.5344036697247706,
+      "f1": 0.6893491124260355,
+      "support": 436
+    }
+  ],
+  "per_class_svm": [
+    {
+      "class": "c0",
+      "activity": "Safe driving",
+      "precision": 0.4114285714285714,
+      "recall": 0.6382978723404256,
+      "f1": 0.5003474635163307,
+      "support": 564
+    },
+    {
+      "class": "c1",
+      "activity": "Texting \u2013 right",
+      "precision": 0.8674698795180723,
+      "recall": 0.3037974683544304,
+      "f1": 0.45,
+      "support": 474
+    },
+    {
+      "class": "c2",
+      "activity": "Phone \u2013 right",
+      "precision": 0.5807365439093485,
+      "recall": 0.4091816367265469,
+      "f1": 0.48009367681498827,
+      "support": 501
+    },
+    {
+      "class": "c3",
+      "activity": "Texting \u2013 left",
+      "precision": 0.6141215106732348,
+      "recall": 0.6977611940298507,
+      "f1": 0.6532751091703056,
+      "support": 536
+    },
+    {
+      "class": "c4",
+      "activity": "Phone \u2013 left",
+      "precision": 0.9936305732484076,
+      "recall": 0.2937853107344633,
+      "f1": 0.45348837209302323,
+      "support": 531
+    },
+    {
+      "class": "c5",
+      "activity": "Operating radio",
+      "precision": 0.5225334957369062,
+      "recall": 0.8155893536121673,
+      "f1": 0.6369710467706013,
+      "support": 526
+    },
+    {
+      "class": "c6",
+      "activity": "Drinking",
+      "precision": 0.48201438848920863,
+      "recall": 0.7584905660377359,
+      "f1": 0.5894428152492669,
+      "support": 530
+    },
+    {
+      "class": "c7",
+      "activity": "Reaching behind",
+      "precision": 0.6501128668171557,
+      "recall": 0.6,
+      "f1": 0.6240520043336945,
+      "support": 480
+    },
+    {
+      "class": "c8",
+      "activity": "Hair / makeup",
+      "precision": 0.8253968253968254,
+      "recall": 0.65,
+      "f1": 0.7272727272727273,
+      "support": 400
+    },
+    {
+      "class": "c9",
+      "activity": "Talking to passenger",
+      "precision": 0.23703703703703705,
+      "recall": 0.22018348623853212,
+      "f1": 0.22829964328180738,
+      "support": 436
+    }
+  ],
+  "per_driver_accuracy": [
+    {
+      "subject": "p002",
+      "cnn": 0.9213793103448276,
+      "svm": 0.22482758620689655
+    },
+    {
+      "subject": "p026",
+      "cnn": 0.8929765886287625,
+      "svm": 0.5376254180602007
+    },
+    {
+      "subject": "p035",
+      "cnn": 0.9209905660377359,
+      "svm": 0.8018867924528302
+    },
+    {
+      "subject": "p041",
+      "cnn": 0.9338842975206612,
+      "svm": 0.6909090909090909
+    },
+    {
+      "subject": "p050",
+      "cnn": 0.8265822784810126,
+      "svm": 0.5012658227848101
+    },
+    {
+      "subject": "p075",
+      "cnn": 0.9078624078624079,
+      "svm": 0.5085995085995086
+    }
+  ]
+}

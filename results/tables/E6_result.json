@@ -1,0 +1,23 @@
+{
+  "id": "E6",
+  "name": "Deeper FT 160px + aug",
+  "size": 160,
+  "mode": "deep",
+  "aug": true,
+  "epochs": 10,
+  "lr": 0.0001,
+  "ls": 0.1,
+  "wd": 0.0001,
+  "init": "E1",
+  "patience": 3,
+  "trainable_params": 2150602,
+  "total_params": 2270794,
+  "epochs_run": 8,
+  "best_epoch": 5,
+  "val_accuracy": 0.8373800112930547,
+  "val_macro_f1": 0.8146016466146684,
+  "val_loss": 0.7048394124143785,
+  "train_accuracy_at_best": 0.9943836331367493,
+  "training_seconds": 276.46356121400004,
+  "model_mb": 25.67
+}
